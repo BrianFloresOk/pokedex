@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components"
 import { FaWeightHanging } from 'react-icons/fa'
 import colorFondo from '../../GlobalStyles/ColoresDeFondo'
-console.log(colorFondo);
 
 const ContentCard = styled.article`
     width: 80%;
@@ -15,6 +14,15 @@ const ContentCard = styled.article`
         box-shadow: rgba(0, 0, 0, 1.1) 0px 3px 6px -2px;
         border: none;
         border-radius: 13px;
+        transform-style: preserve-3d;
+        transition: transform 0.3s ease;
+
+        :hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: none;
+            border: thin solid lightgray;
+        }
     }
 `;
 
@@ -24,7 +32,7 @@ const ContentSection = styled.div`
     `;
 
 const ContentSectionImage = styled(ContentSection)`
-    background: linear-gradient(360deg,${props => props.colores[1]}, ${props => props.colores[0]});
+    background: linear-gradient(360deg,${props => props.colores[0]}, ${props => props.colores[1]});
     clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 100%, 75% 88%, 25% 88%, 0 100%, 0% 20%);
     border-radius: 13px;
 `;
@@ -141,8 +149,6 @@ export const Card = ({ name, avatar, peso, tipo1, tipo2, movimientos }) => {
 
     const coloresTipo1 = colorFondo[tipo1] || ['#000', '#000'];
     const coloresTipo2 = colorFondo[tipo2] || 'transparent';
-    console.log(coloresTipo1);
-    console.log(coloresTipo2);
 
     return (
         <div>

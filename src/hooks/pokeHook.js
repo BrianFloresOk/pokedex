@@ -3,11 +3,14 @@ import { useEffect, useState } from 'react';
 const useFetchPokemons = () => {
     const [pokemons, setPokemons] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [perPage] = useState(20);
 
     useEffect(() => {
         const fetchPokemons = async () => {
             try {
-                let url = 'https://pokeapi.co/api/v2/pokemon/';
+                const offset = (currentPage - 1) * perPage;
+                const url = `https://pokeapi.co/api/v2/pokemon?limit=${perPage}&offset=${offset}`;                
                 let res = await fetch(url);
                 let json = await res.json();
                 let results = json.results;
@@ -103,9 +106,9 @@ const useFetchPokemons = () => {
         };
 
         fetchPokemons();
-    }, []);
+    }, [currentPage, perPage]);
 
-    return { pokemons, loading };
+    return { pokemons, loading, currentPage, setCurrentPage };
 };
 
 export default useFetchPokemons;

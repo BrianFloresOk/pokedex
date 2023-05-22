@@ -47,6 +47,10 @@ const ButtonPoke = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 const Icon = styled(FaSearch)`

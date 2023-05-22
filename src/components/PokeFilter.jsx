@@ -43,6 +43,12 @@ const PokeUl = styled.ul`
     }
 `;
 
+const PokeLi = styled.li`
+    :hover{
+        cursor: pointer;
+    }
+`
+
 const Images = styled.img`
     width: 100%;
     height: 100%;
@@ -67,24 +73,24 @@ export const PokeFilter = () => {
                 <PokeParr>Seleccionar por tipo</PokeParr>
             </div>
             <PokeUl>
-                <li><Images src={acero} alt="acero"></Images></li>
-                <li><Images src={agua} alt="agua"></Images></li>
-                <li><Images src={bicho} alt="bicho"></Images></li>
-                <li><Images src={dragon} alt="dragon"></Images></li>
-                <li><Images src={electrico} alt="electrico"></Images></li>
-                <li><Images src={fantasma} alt="fantasma"></Images></li>
-                <li><Images src={fuego} alt="fuego"></Images></li>
-                <li><Images src={hada} alt="hada"></Images></li>
-                <li><Images src={hielo} alt="hielo"></Images></li>
-                <li><Images src={lucha} alt="lucha"></Images></li>
-                <li><Images src={normal} alt="normal"></Images></li>
-                <li><Images src={planta} alt="planta"></Images></li>
-                <li><Images src={psiquico} alt="psiquico"></Images></li>
-                <li><Images src={roca} alt="roca"></Images></li>
-                <li><Images src={siniestro} alt="siniestro"></Images></li>
-                <li><Images src={tierra} alt="tierra"></Images></li>
-                <li><Images src={veneno} alt="veneno"></Images></li>
-                <li><Images src={volador} alt="volador"></Images></li>
+                <PokeLi><Images src={acero} alt="acero"></Images></PokeLi>
+                <PokeLi><Images src={agua} alt="agua"></Images></PokeLi>
+                <PokeLi><Images src={bicho} alt="bicho"></Images></PokeLi>
+                <PokeLi><Images src={dragon} alt="dragon"></Images></PokeLi>
+                <PokeLi><Images src={electrico} alt="electrico"></Images></PokeLi>
+                <PokeLi><Images src={fantasma} alt="fantasma"></Images></PokeLi>
+                <PokeLi><Images src={fuego} alt="fuego"></Images></PokeLi>
+                <PokeLi><Images src={hada} alt="hada"></Images></PokeLi>
+                <PokeLi><Images src={hielo} alt="hielo"></Images></PokeLi>
+                <PokeLi><Images src={lucha} alt="lucha"></Images></PokeLi>
+                <PokeLi><Images src={normal} alt="normal"></Images></PokeLi>
+                <PokeLi><Images src={planta} alt="planta"></Images></PokeLi>
+                <PokeLi><Images src={psiquico} alt="psiquico"></Images></PokeLi>
+                <PokeLi><Images src={roca} alt="roca"></Images></PokeLi>
+                <PokeLi><Images src={siniestro} alt="siniestro"></Images></PokeLi>
+                <PokeLi><Images src={tierra} alt="tierra"></Images></PokeLi>
+                <PokeLi><Images src={veneno} alt="veneno"></Images></PokeLi>
+                <PokeLi><Images src={volador} alt="volador"></Images></PokeLi>
             </PokeUl>
         </PokeDiv>
     )
